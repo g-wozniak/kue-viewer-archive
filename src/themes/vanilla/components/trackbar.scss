@@ -1,0 +1,83 @@
+
+#kue-viewer.--v-theme-vanilla {
+
+  /* Trackbar */
+  .--kue-v-tb {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 5;
+    min-width: 800px;
+
+    .--kue-v-ui-window {
+      border-top: 0;
+      border-radius: 0 0 $U $U;
+    }
+
+    &--inner {
+      padding: $U $Uu;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+    }
+
+    &-details {
+      flex: auto;
+
+      &-pathway {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        margin-bottom: $U;
+
+        .--logo {
+          filter: invert(1);
+          margin-right: $Uu;
+        }
+
+        .--pathway {
+          .--name {
+            @include UI_Font(primary, normal);
+            font-size: 1.2em;
+            text-shadow: 1px 1px $UI_THEME_LAYER_0_SHADOW;
+            color: $UI_THEME_TEXT_NORMAL;
+            margin: 0;
+            padding: 0;
+          }
+
+          .--started {
+            @include UI_Font(secondary, normal);
+            font-size: .8em;
+            color: $UI_THEME_ICON_DEFAULT;
+            strong {
+              @include UI_Font(secondary, normal);
+              color: $UI_BRAND_STORM;
+            }
+          }
+        }
+      }
+
+      &-progress {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        .--kue-v-ui-banner:not(:last-child) {
+          margin-right: $u;
+        }
+
+      }
+    }
+
+    &-menu {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      .--kue-v-ui-menu:not(:last-child) {
+        margin-right: $Uu;
+      }
+    }
+  }
+}

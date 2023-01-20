@@ -1,0 +1,22 @@
+#kue-viewer.--v-theme-vanilla {
+  .--obscured .--kue-v-b {
+    background: url('/assets/card_deck_up.png') no-repeat top center;
+    height: 281px;
+    box-shadow: 0 25px 30px $UI_CARD_LAYOUT_SHADOW;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .--card-icon img {
+      filter: saturate(3%) brightness(.7) drop-shadow(0 0 4px #222) hue-rotate(285deg);
+    }
+  }
+
+  .--obscured.--kue-v-b--skill img {
+    filter: saturate(5%) brightness(1) drop-shadow(0 0 4px #222) hue-rotate(285deg) !important;
+  }
+
+  .--obscured.--kue-v-b--category img {
+    filter: saturate(4%) brightness(.85) drop-shadow(0 0 4px #222) hue-rotate(285deg) !important;
+  }
+}

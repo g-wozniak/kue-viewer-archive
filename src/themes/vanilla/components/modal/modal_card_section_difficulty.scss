@@ -1,0 +1,39 @@
+
+.--kue-v-b-modal.--v-theme-vanilla .--kue-v-b-modal-section.--section-difficulty {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  .--icon {
+    margin-right: $U;
+    svg {
+      color: $UI_THEME_ICON_DEFAULT;
+      height: 22px;
+      filter: drop-shadow(1px 1px 0px $UI_THEME_LAYER_2);
+    }
+  }
+
+  .--record {
+
+    .--label {
+      @include UI_Font(secondary, bold);
+      text-shadow: 1px 1px $UI_THEME_LAYER_2;
+      letter-spacing: 1px;
+      margin-bottom: $u;
+      display: block;
+      color: $UI_THEME_ICON_DEFAULT;
+      font-size: .8em;
+      text-transform: uppercase;
+    }
+
+    .--value {
+      @include UI_Font(primary, strong);
+      text-shadow: 1px 1px $UI_THEME_LAYER_2;
+      display: block;
+      font-size: 1.1em;
+      color: $UI_THEME_TEXT_HIGHLIGHT;
+    }
+
+  }
+
+}

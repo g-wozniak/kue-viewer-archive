@@ -1,0 +1,30 @@
+#kue-viewer.--v-theme-vanilla {
+  .--selected.--kue-v-b--category {
+    box-shadow: 0px 0px 10rem $UI_CARD_CATEGORY_COLOR;
+  }
+  .--kue-v-b--category {
+    .--icon svg {
+      color: $UI_CARD_CATEGORY_COLOR;
+    }
+    .--kue-v-ui-button .--button {
+      //@include UI_Card_Button($UI_CARD_CATEGORY_COLOR, $UI_CARD_CATEGORY_COLOR_DARK, #151307, #fff8bc);
+    }
+  }
+
+  .react-flow__node-CARD_CATEGORY .react-flow__handle {
+    background: $UI_CARD_CATEGORY_COLOR;
+  }
+}
+
+.--kue-v-b-modal.--category.--v-theme-vanilla {
+  .--kue-v-b-modal-caption .--icon svg,
+  .--kue-v-b-modal-caption .--label {
+    color: $UI_CARD_CATEGORY_COLOR !important;
+  }
+}
+
+.--kue-v-b-modal.--v-theme-vanilla {
+  .--stat-count .--quantity.--card-category {
+    color: $UI_CARD_CATEGORY_COLOR;
+  }
+}

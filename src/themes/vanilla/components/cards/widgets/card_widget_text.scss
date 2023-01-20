@@ -1,0 +1,19 @@
+.--kue-v-b-modal.--v-theme-vanilla .--card-widget.--widget-text {
+  .--caption {
+    @include UI_Font(primary, strong);
+    text-shadow: 2px 2px $UI_THEME_LAYER_3;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    color: $UI_BRAND_STORM;
+    margin: 0 0 $U 0;
+    padding: 0 0 $u 0;
+    border-bottom: 1px solid $UI_THEME_IN_WINDOW_BORDER;
+    line-height: 100%;
+  }
+  .--text {
+    @include UI_Font(monospace, normal);
+    font-size: 1em;
+    text-shadow: 1px 1px $UI_THEME_LAYER_3;
+    color: $UI_THEME_TEXT_NORMAL;
+  }
+}

@@ -1,0 +1,58 @@
+#kue-viewer.--v-theme-vanilla,
+.--kue-v-b-modal.--v-theme-vanilla {
+
+  .--kue-v-ui-button {
+    position: relative;
+
+    .--button {
+      @include UI_Font(primary, normal);
+      border-radius: $u $u 0 0;
+      color: #dcd6ea;
+      margin: 0 3px;
+      min-width: 125px;
+      font-size: 1.1em;
+      box-shadow: 0px 1px 4px #13111a;
+      text-shadow: 2px 2px #262a54;
+      padding: $U $Uu;
+      background: url('/assets/bt_mask.png') repeat-x top left,
+                  linear-gradient(180deg, $UI_BRAND_STORM 0%, #28213b 100%);
+
+      &:hover, &:focus {
+        background: url('/assets/bt_mask.png') repeat-x top left,
+                    linear-gradient(180deg, #8e96ef 0%, #3d3357 100%);
+        text-shadow: none;
+        color: $UI_BRAND_SNOW;
+      }
+
+      &:active,
+      &:active {
+        color: $UI_THEME_IN_WINDOW_SHADOW;
+        text-shadow: none;
+      }
+
+      &.disabled {
+        text-shadow: none;
+        color: #aaa;
+        background: $UI_THEME_LAYER_4;
+      }
+    }
+
+    .--left-corner,
+    .--right-corner {
+      position: absolute;
+      bottom: -3px;
+      width: 20px;
+      height: 17px;
+      z-index: 1;
+    }
+
+    .--left-corner {
+      left: -1px;
+      background: url('/assets/bt_corner_lb.png') no-repeat left bottom;
+    }
+    .--right-corner {
+      right: -1px;
+      background: url('/assets/bt_corner_rb.png') no-repeat right bottom;
+    }
+  }
+}

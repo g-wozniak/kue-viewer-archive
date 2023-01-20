@@ -1,0 +1,51 @@
+
+/*== local.scss ==*/
+/* This is the stylesheet for local build preview only */
+@import "build.scss";
+
+@font-face {
+  font-family: 'Kue';
+  src: url('/assets/fonts/kue-bold.woff') format('woff'),
+  url('/assets/fonts/kue-bold.woff2') format('woff2'),
+  url('/assets/fonts/kue-bold.eot') format('eot');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Kue';
+  src: url('/assets/fonts/kue-regular.woff') format('woff'),
+  url('/assets/fonts/kue-regular.woff2') format('woff2'),
+  url('/assets/fonts/kue-regular.eot') format('eot');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  min-width: 1400px;
+  width: 100%;
+  height: 100%;
+}
+
+.transition .controls {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 10;
+  font-size: 12px;
+}
+
+.transition .controls button + button {
+  margin-left: 10px;
+}

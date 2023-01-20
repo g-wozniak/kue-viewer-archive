@@ -1,0 +1,64 @@
+
+.--v-theme-vanilla #kue-viewer-flow .react-flow {
+
+  background: $UI_THEME_LAYER_0;
+
+  &__attribution {
+    z-index: 5 !important;
+  }
+
+  &__handle {
+    border: none;
+    box-shadow: 0 0 $u $UI_THEME_LAYER_0_SHADOW;
+    width: 18px;
+    height: 18px;
+
+    &-right {
+      right: -18px;
+    }
+
+    &-left {
+      left: -18px;
+    }
+  }
+
+  &__edge {
+    &-path {
+      stroke: $UI_THEME_TEXT_NORMAL;
+      stroke-width: 1;
+    }
+  }
+
+  &__controls {
+    left: 240px;
+    right: unset;
+    bottom: 32px;
+    box-shadow: none;
+
+    &-button {
+      @include UI_Button_Icon();
+      @include UI_Shadow_Soft();
+      margin-bottom: $u;
+      > svg {
+        filter: invert(.75);
+      }
+      &:hover, &:focus {
+        box-shadow: 0 0 $u_ $UI_BRAND_STORM;
+        > svg {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+
+  &__minimap {
+    @include UI_Shadow_Strong();
+    border-radius: $U;
+    left: 25px;
+    right: 0;
+    bottom: 32px;
+    padding: 7px;
+    border: 1px solid $UI_THEME_LAYER_0_BORDER;
+    background-color: $UI_THEME_LAYER_2 !important;
+  }
+}

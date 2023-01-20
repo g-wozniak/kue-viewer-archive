@@ -1,0 +1,31 @@
+.--kue-v-b-modal.--v-theme-vanilla .--kue-v-b-layout.--not-selected {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  .--icon {
+    margin-right: $Uu;
+    svg {
+      color: $UI_THEME_ICON_DEFAULT;
+      height: 36px;
+      filter: drop-shadow(1px 1px 0px $UI_THEME_LAYER_2);
+    }
+  }
+  .--message {
+    .--header {
+      @include UI_Font(monospace, bold);
+      text-shadow: 1px 1px $UI_THEME_LAYER_2;
+      color: $UI_THEME_TEXT_HIGHLIGHT;
+      font-size: 1.2em;
+      margin-bottom: $U;
+    }
+    .--text {
+      @include UI_Font(secondary, normal);
+      margin-top: $u;
+      text-shadow: 1px 1px $UI_THEME_LAYER_2;
+      display: block;
+      font-size: 1em;
+      line-height: 125%;
+      color: $UI_THEME_ICON_DEFAULT;
+    }
+  }
+}

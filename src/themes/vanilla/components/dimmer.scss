@@ -1,0 +1,29 @@
+.ui.page.visible.dimmer,
+.--kue-v-dimmer {
+  height: 100%;
+  background-color: rgba(0,0,0,.55) !important;
+
+  .--loader {
+
+    .loader {
+      top: 42% !important;
+    }
+
+    &-info {
+      margin-top: 10px;
+
+      >.--header {
+        @include UI_Font(primary, light);
+        font-size: 1.8em;
+        display: block;
+        margin-bottom: $Uu;
+      }
+
+      >.--subheader {
+        @include UI_Font(primary, light);
+        font-size: 1.2em;
+        display: block;
+      }
+    }
+  }
+}

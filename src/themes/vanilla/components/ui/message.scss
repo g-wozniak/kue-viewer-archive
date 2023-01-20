@@ -1,0 +1,66 @@
+#kue-viewer.--v-theme-vanilla .--kue-v-ui-message,
+.--kue-v-b-modal.--v-theme-vanilla .--kue-v-ui-message {
+  @include UI_Shadow_Soft();
+  box-shadow: none;
+  @include UI_Border_Soften_Little();
+  padding: 0;
+
+  border: 1px solid $UI_THEME_LAYER_0_BORDER;
+  background: $UI_THEME_LAYER_2;
+
+  &.warning {
+    border: 2px solid $UI_BRAND_STORM;
+    background: $UI_THEME_LAYER_3;
+    .--header {
+      background: $UI_BRAND_STORM;
+    }
+  }
+
+  &.negative {
+    border: 2px solid $UI_BRAND_RED;
+    background: $UI_THEME_LAYER_3;
+    .--header {
+      background: $UI_BRAND_RED;
+    }
+  }
+
+  .--header {
+    @include UI_Font(secondary, bold);
+    color: $UI_COLOR_WHITE;
+    background: $UI_THEME_LAYER_1;
+    text-shadow: 1px 1px $UI_THEME_LAYER_0_SHADOW;
+    line-height: 125%;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: $u_ $U .85rem $U;
+    > svg {
+      padding-right: $U;
+    }
+  }
+
+  .--content {
+    @include UI_Border_Soften_Little();
+    padding: $Uu;
+
+    .--text {
+      p, span {
+        @include UI_Font(secondary, normal);
+        font-size: .9em;
+        color: $UI_THEME_TEXT_NORMAL;
+        text-shadow: 1px 1px $UI_THEME_LAYER_0_SHADOW;
+        line-height: 125%;
+      }
+    }
+
+    .--list {
+      margin: $U $u 0 $u;
+      &-item {
+        @include UI_Font(secondary, normal);
+        font-size: .9em;
+        color: $UI_THEME_TEXT_NORMAL;
+        line-height: 110%;
+      }
+    }
+
+  }
+}

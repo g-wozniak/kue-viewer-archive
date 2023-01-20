@@ -1,0 +1,104 @@
+.--kue-v-b-modal.--v-theme-vanilla {
+  background: transparent !important;
+  max-width: 640px;
+
+  .--kue-v-ui-window {
+    padding: $UU;
+    border-radius: $U !important;
+
+    .--kue-v-b-modal-header {
+    }
+
+    .--kue-v-b-modal-body {
+      margin-top: $U;
+    }
+
+    .--kue-v-b-modal-actions {
+      border: 1px solid $UI_THEME_LAYER_4;
+      @include UI_Border_Soften_Little();
+      box-shadow: 1px 1px 0 $UI_THEME_LAYER_1;
+      padding: $U $U_u;
+      margin-top: $U;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &.--single {
+        justify-content: flex-end;
+      }
+
+      >:not(:last-child) {
+        margin-right: $U;
+      }
+      .--kue-v-ui-button-icon {
+        width: 130px;
+
+        .--icon {
+          border: none;
+          background: $UI_THEME_LAYER_4;
+          border-radius: 10rem;
+          padding: $u_ 0;
+          svg {
+            font-size: 1.8em;
+          }
+        }
+        .--text {
+          font-size: .9em;
+          padding-left: 4px;
+        }
+
+        &.--back, &.--complete, &.--default {
+          .--icon {
+            @include UI_Effect_Ease_Color();
+          }
+        }
+
+        &.--back {
+          &:focus, &:hover {
+            .--icon {
+              box-shadow: none;
+              background: $UI_BRAND_RED;
+            }
+          }
+        }
+
+        &.--complete {
+          &:focus, &:hover {
+            .--icon {
+              box-shadow: none;
+              background: #5db926;
+            }
+          }
+        }
+
+        &.--default {
+          .--icon {
+            background: $UI_THEME_ICON_DEFAULT;
+            > svg {
+              color: $UI_THEME_TEXT_NORMAL;
+            }
+          }
+          &:focus, &:hover {
+            .--icon {
+              box-shadow: none;
+              background: $UI_BRAND_STORM;
+              svg {
+                color: $UI_COLOR_WHITE;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+}
+
+@import "modal/modal_caption";
+@import "modal/modal_section";
+@import "modal/modal_metrics";
+@import "modal/modal_tabs";
+@import "modal/modal_tab";
+@import "modal/modal_card_section_difficulty";
+@import "modal/modal_card_section_time";
+@import "modal/modal_card_section_cost";

@@ -1,0 +1,32 @@
+$TAB_BORDER_COLOR: transparent;
+.--kue-v-b-modal.--v-theme-vanilla .--kue-v-b-modal-tabs-tab {
+  background: $UI_THEME_LAYER_3;
+  border-color: $TAB_BORDER_COLOR !important;
+  border-bottom: 1px solid $TAB_BORDER_COLOR;
+  border-left: 1px solid $TAB_BORDER_COLOR;
+  border-right: 1px solid $TAB_BORDER_COLOR;
+  padding: $UU;
+
+  h1, h2, h3, h4 {
+    @include UI_Font(primary, strong);
+    color: $UI_THEME_TEXT_HIGHLIGHT;
+    margin: 0 0 $U 0;
+    padding: 0;
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  h4 {
+    font-size: 1em;
+  }
+
+  .--headline {
+    @include UI_Font(primary, normal);
+    color: $UI_THEME_TEXT_NORMAL;
+    line-height: 130%;
+    font-size: .9em;
+  }
+
+}

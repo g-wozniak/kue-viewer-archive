@@ -1,0 +1,34 @@
+$TAB_BORDER_COLOR: transparent;
+
+.--kue-v-b-modal.--v-theme-vanilla .--kue-v-b-modal-tabs {
+
+  .ui.attached.tabular.menu {
+    border-bottom: 1px solid $TAB_BORDER_COLOR;
+  }
+
+  .ui.attached.tabular.menu .item {
+    @include UI_Effect_Ease_Color();
+    @include UI_Font(secondary, normal);
+    color: $UI_THEME_TEXT_NORMAL;
+    font-size: 1.1em;
+    border-bottom: 1px solid $TAB_BORDER_COLOR;
+    &:hover, &:focus {
+      background: $UI_THEME_LAYER_4;
+    }
+  }
+
+  .ui.attached.tabular.menu .item.active {
+    @include UI_Font(secondary, bold);
+    background: $UI_THEME_LAYER_3;
+    border-top: 1px solid $TAB_BORDER_COLOR;
+    border-left: 1px solid $TAB_BORDER_COLOR;
+    border-right: 1px solid $TAB_BORDER_COLOR;
+    color: $UI_BRAND_STORM;
+    font-size: 1.1em;
+  }
+
+  .--kue-v-b-modal-actions {
+    background: transparent;
+    border-color: $UI_THEME_IN_WINDOW_BORDER;
+  }
+}

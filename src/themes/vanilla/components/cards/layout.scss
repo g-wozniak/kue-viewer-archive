@@ -1,0 +1,16 @@
+.--kue-v-b-modal.--v-theme-vanilla .--kue-v-b-layout {
+  @include UI_Gradient(180deg, $UI_THEME_ICON_DEFAULT, $UI_CARD_LAYOUT_COLOR_DARK);
+  box-shadow: 1px 1px 0 $UI_THEME_LAYER_1;
+  @include UI_Border_Soften_Little();
+  border: 1px solid $UI_CARD_LAYOUT_COLOR_BORDER;
+  padding: $UUu $UUu;
+
+  /* == Single layout == */
+  &.--layout-single {
+      .--kue-v-b-layout-slot {
+        margin-bottom: $UU;
+      }
+  }
+}
+
+@import "layout_not_selected.scss";

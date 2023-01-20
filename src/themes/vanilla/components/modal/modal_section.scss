@@ -1,0 +1,6 @@
+.--kue-v-b-modal.--v-theme-vanilla .--kue-v-b-modal-section {
+  @include UI_Gradient(0deg, $UI_THEME_LAYER_3, $UI_THEME_LAYER_4);
+  box-shadow: 1px 1px 0 $UI_THEME_LAYER_1;
+  @include UI_Border_Soften_Little();
+  padding: $U $Uu;
+}

@@ -1,0 +1,64 @@
+#kue-viewer.--v-theme-vanilla,
+.--kue-v-b-modal.--v-theme-vanilla {
+
+  .--kue-v-ui-button-icon {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    outline: none;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none;
+    min-width: 32px;
+    min-height: 32px;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      .--text {
+        color: $UI_BRAND_SNOW;
+      }
+      .--icon {
+        box-shadow: 0 0 $U $UI_BRAND_STORM;
+        > svg {
+          color: $UI_BRAND_SNOW;
+        }
+      }
+    }
+
+    &:active {
+      background-color: transparent !important;
+    }
+
+    .active {
+      .--text {
+        color: $UI_BRAND_STORM;
+      }
+      .--icon {
+        box-shadow: none;
+      }
+    }
+
+    .--icon {
+      @include UI_Button_Icon();
+      @include UI_Shadow_Soft($UI_THEME_LAYER_1);
+      display: block;
+      margin-bottom: $u;
+      padding: $u;
+      > svg {
+        color: $UI_THEME_ICON_DEFAULT;
+        font-size: 1.1em;
+      }
+    }
+
+    .--text {
+      @include UI_Effect_Ease_Color();
+      @include UI_Font(secondary, normal);
+      color: $UI_THEME_TEXT_NORMAL;
+      text-shadow: 1px 1px $UI_THEME_LAYER_0_SHADOW;
+      font-size: 0.8em;
+      display: block;
+    }
+  }
+
+}

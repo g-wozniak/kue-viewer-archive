@@ -1,0 +1,40 @@
+
+
+#kue-viewer.--v-theme-vanilla {
+
+  .--kue-v-ui-banner {
+    @include UI_Shadow_Soft($UI_THEME_LAYER_1);
+    @include UI_Gradient(180deg, $UI_THEME_LAYER_3, $UI_THEME_LAYER_1);
+    border: 2px solid $UI_THEME_LAYER_4;
+    @include UI_Border_Soften_Little();
+    padding: $_u $U;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    > svg, span {
+      color: #eee;
+    }
+
+    > svg {
+      font-size: 1.1em;
+      color: $UI_THEME_ICON_DEFAULT;
+      padding-right: $u;
+    }
+    > span {
+      @include UI_Font(secondary, normal);
+      text-shadow: 1px 1px $UI_THEME_LAYER_0_SHADOW;
+      font-size: .8em;
+      color: $UI_THEME_TEXT_NORMAL;
+      .--strong {
+        padding: 0 $_u;
+        color: $UI_BRAND_STORM;
+        @include UI_Font(monospace, strong);
+      }
+      >:last-child {
+        margin-right: unset;
+      }
+    }
+  }
+
+}

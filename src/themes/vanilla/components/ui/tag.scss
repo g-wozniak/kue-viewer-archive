@@ -1,0 +1,26 @@
+#kue-viewer.--v-theme-vanilla,
+.--kue-v-b-modal.--v-theme-vanilla {
+
+  .--kue-v-ui-tag {
+    @include UI_Font(secondary, normal);
+    padding: 2px 8px;
+    margin: 0 3px;
+    font-size: 0.9em;
+    line-height: 100%;
+    display: inline-block;
+    border-radius: 10px;
+    text-shadow: none;
+    &.--ok {
+      margin: 0;
+      padding: 2px;
+      svg {
+        color: #49a80f;
+      }
+    }
+    &.--warning {
+      color: $UI_THEME_LAYER_0_SHADOW;
+      background: #e78a43;
+    }
+  }
+
+}

@@ -1,0 +1,33 @@
+#kue-viewer.--v-theme-vanilla,
+.--kue-v-b-modal.--v-theme-vanilla {
+
+  .--kue-v-ui-checkbox {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+
+    &.--checked .--label {
+      color: $UI_THEME_TEXT_HIGHLIGHT;
+    }
+
+    .ui.toggle.checkbox {
+      label::before {
+        background: $UI_THEME_IN_WINDOW_BORDER;
+      }
+
+    }
+
+    .ui.toggle.checkbox input:checked~label:before {
+      background: $UI_BRAND_STORM !important;
+    }
+
+    .--label {
+      @include UI_Font(secondary, normal);
+      cursor: pointer;
+      font-size: .85em;
+      line-height: 125%;
+      color: $UI_THEME_TEXT_NORMAL;
+      padding: $u $U $u 30px;
+    }
+  }
+}

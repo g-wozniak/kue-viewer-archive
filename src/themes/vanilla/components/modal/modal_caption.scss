@@ -1,0 +1,59 @@
+
+.--kue-v-b-modal.--v-theme-vanilla .--kue-v-b-modal-caption {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-bottom: $U;
+  .--icon {
+    margin-right: $U;
+    svg {
+      color: $UI_THEME_ICON_DEFAULT;
+      height: 36px;
+      filter: drop-shadow(1px 1px 0px $UI_THEME_LAYER_2);
+    }
+  }
+
+  .--caption {
+    flex-grow: 1;
+    .--label {
+      @include UI_Font(primary, bold);
+      text-shadow: 1px 1px $UI_THEME_LAYER_2;
+      color: $UI_THEME_TEXT_HIGHLIGHT;
+      font-size: 1.4em;
+      margin-bottom: $u;
+    }
+    .--extra {
+      @include UI_Font(primary, normal);
+      text-shadow: 1px 1px $UI_THEME_LAYER_2;
+      color: $UI_BRAND_STORM;
+      font-size: 1.4em;
+      padding-left: $u;
+    }
+    .--headline {
+      @include UI_Font(secondary, normal);
+      margin-top: $u;
+      text-shadow: 1px 1px $UI_THEME_LAYER_2;
+      display: block;
+      font-size: 1em;
+      color: $UI_THEME_TEXT_NORMAL;
+    }
+  }
+
+  .--close {
+    button {
+      border: none;
+      background: none;
+      padding: 0 0 $U $U;
+      &:hover, &:focus {
+        > svg {
+          color: $UI_COLOR_WHITE;
+        }
+      }
+      > svg {
+        height: 18px;
+        color: $UI_THEME_ICON_DEFAULT;
+      }
+    }
+  }
+
+}

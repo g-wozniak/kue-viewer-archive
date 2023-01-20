@@ -1,0 +1,30 @@
+#kue-viewer.--v-theme-vanilla,
+.--kue-v-b-modal.--v-theme-vanilla {
+
+  .--kue-v-ui-icon {
+    $iconHeight: 28px;
+    $iconPadding: 24px;
+    &--inner {
+      @include UI_Gradient(0deg, $UI_THEME_LAYER_2, $UI_THEME_LAYER_3);
+      @include UI_Shadow_Soft();
+      border: 2px solid $UI_THEME_LAYER_4;
+      width: $iconHeight+$iconPadding;
+      height: $iconHeight+$iconPadding;
+      border-radius: 50%;
+      padding: 0;
+      display: block;
+      position: relative;
+
+      > svg {
+        color: $UI_THEME_TEXT_NORMAL;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: $iconHeight;
+        filter: drop-shadow(1px 1px 0px $UI_THEME_LAYER_0_SHADOW);
+      }
+    }
+  }
+
+}

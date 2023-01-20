@@ -1,0 +1,170 @@
+#kue-viewer.--v-theme-vanilla,
+.--kue-v-b-modal.--v-theme-vanilla {
+
+  .--kue-v-b-modal-tabs .--kue-v-ui-table {
+    thead td,
+    tbody td.--label {
+      background: $UI_THEME_LAYER_2;
+    }
+    &.--table-stats {
+      td {
+        border-top: 1px solid $UI_THEME_IN_WINDOW_BORDER;
+        border-bottom: 1px solid $UI_THEME_LAYER_2;
+        background: transparent;
+      }
+      td.--stat {
+        border-right: 1px solid $UI_THEME_LAYER_2;
+      }
+    }
+  }
+
+  .--kue-v-ui-table {
+    width: 100%;
+    margin: $U 0;
+    thead td,
+    tbody td.--label {
+      @include UI_Font(secondary, normal);
+      background: $UI_THEME_LAYER_2;
+      color: $UI_THEME_TEXT_NORMAL;
+      font-size: .9em;
+      white-space: nowrap;
+    }
+
+    &.--table-classic {
+      thead {
+        td {
+          @include UI_Border_Soften_Little();
+          padding: $U;
+        }
+      }
+
+      tbody {
+        td {
+          @include UI_Font(monospace, normal);
+          font-size: .9em;
+          color: $UI_THEME_TEXT_NORMAL;
+        }
+      }
+
+      tr {
+        td {
+          text-align: left;
+          line-height: 100%;
+          padding: $u $U;
+        }
+
+        td:nth-child(2) {
+          min-width: 100px;
+        }
+
+        td:first-child {
+          text-align: center;
+          min-width: 50px;
+
+          .--kue-v-ui-checkbox {
+            justify-content: center;
+          }
+        }
+      }
+    }
+
+    &.--table-stats {
+      border-collapse: separate;
+      border-spacing: 0 $u;
+
+      tbody {
+        td {
+          border-top: 1px solid $UI_THEME_IN_WINDOW_BORDER;
+          border-bottom: 1px solid $UI_THEME_LAYER_1;
+        }
+        td.--label {
+          width: 140px;
+          padding: $u_ $U;
+          border-radius: $u 0 0 $u;
+          vertical-align: top;
+          text-align: right;
+          border-left: 1px solid $UI_THEME_IN_WINDOW_BORDER;
+        }
+        td.--stat {
+          @include UI_Font(primary, normal);
+          background: $UI_THEME_LAYER_3;
+          border-right: 1px solid $UI_THEME_LAYER_1;
+          border-radius: 0 $u $u 0;
+          padding: $u_ $U;
+          line-height: 125%;
+          color: $UI_THEME_TEXT_HIGHLIGHT;
+          > span {
+            font-size: .8em;
+          }
+        }
+      }
+
+      a {
+        color: $UI_BRAND_STORM;
+        text-decoration: underline;
+        &:hover, &:focus {
+          color: $UI_CARD_TASK_COLOR_LIGHT;
+        }
+      }
+
+      .--stat-total {
+        strong {
+          font-size: 1.7em;
+          padding-right: $_u;
+          color: $UI_BRAND_STORM;
+        }
+      }
+
+      .--stat-progress {
+        strong {
+          font-size: 1.5em;
+          padding: 0 $_u;
+          color: $UI_BRAND_GLACIER;
+        }
+      }
+
+      .--stat-button {
+        display: block;
+        margin-top: $u;
+        .--kue-v-ui-button {
+          font-size: .8em;
+        }
+      }
+
+      .--stat-count {
+        ul {
+          list-style: none;
+          margin: $U 0 0 0;
+          padding: 0;
+          li {
+            align-items: center;
+            display: flex;
+            justify-content: flex-start;
+          }
+          li:not(:last-child) {
+            padding-bottom: $u;
+          }
+        }
+
+        .--icon {
+          padding-right: $u;
+          svg {
+            color: $UI_THEME_ICON_DEFAULT;
+            font-size: 1.6em;
+          }
+        }
+
+        .--name {
+          color: $UI_THEME_TEXT_NORMAL;
+        }
+
+        .--quantity {
+          @include UI_Font(monospace, bold);
+          padding-left: $U;
+          font-size: 1.7em;
+        }
+      }
+
+    }
+  }
+}
